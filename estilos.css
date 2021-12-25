@@ -1,0 +1,284 @@
+body{
+    font-family: 'Barlow', sans-serif;
+font-family: 'Roboto', sans-serif;
+color: #333;
+margin: 0;
+}
+p{
+    margin-bottom: 1.6em;
+}
+.container{
+    width: 85%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.header{
+background: #333;
+color: white;
+padding: 2rem 0;
+}
+.header a{
+    text-decoration: none;
+    color: white;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navegacion ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navegacion ul li{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.navegacion ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    opacity: 0.8;
+}
+.navegacion ul li a:hover{
+    opacity: 1;
+    background: #ccc;
+    border-radius: 5px;
+    transition: all 1s linear;
+}
+.title-header{
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    font-size: 1.2em;
+}
+.menu-header{
+    display: none;
+}
+
+/*
+Responsive
+
+*/
+@media only screen and (max-width: 767px){
+    .menu-header{
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        font-weight: 700;
+        color:#ccc;
+        text-transform: uppercase;
+        
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .title-header{
+        font-size: 18px;
+    
+    }
+    .navegacion ul{
+        display: none;
+    }
+    .navegacion ul.show{
+        display: block;
+    }
+    .navegacion{
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .navegacion ul li{
+        display: block;
+    }
+    .navegacion ul li a{
+        display: block;
+        padding: 0.5rem 0;
+        opacity: 0.8;
+    }
+    .container .video{
+        position: relative;
+        left:19px;
+    }
+    .cuerpo-reglas{
+        position: relative;
+        left: -20px;
+    }
+    .image-reglas{
+       margin-left: 20px;
+    }
+    .show-btn{
+        display: none;
+    }
+
+}
+
+
+.list-ordenada li{
+
+    margin-top: 1em;
+    
+}
+.title{
+    text-align: center;
+}
+p{
+    line-height: 1.5em;
+}
+
+/*
+imagen
+*/
+.image-cancha{
+    float: left;
+    width: 300px;
+    margin-right:0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    
+}
+/*
+Imagen de Reglas
+*/
+.image-reglas{
+    float: left;
+    width: 300px;
+    margin-right:2em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;   
+}
+/*
+Video de REGLAS
+*/
+.video{
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,23);
+}
+/*
+BOTON DE SUBIDA
+*/
+.go-top-container{
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+}
+.go-top-btn{
+    width: 0rem;
+    height: 0rem;
+    background: rgb(24, 24, 24);
+    border-radius: 50%;
+    cursor:pointer;
+    top:50%;
+    left: 50%;
+    text-transform: (-50%, -50%);
+    z-index: -1;
+
+}
+.go-top-btn i{
+    position: absolute;
+    font-size: 1.7rem;
+    top:48%;
+    left:50%;
+    transform:translate(-50%, -50%) scale(0);
+    color: white;
+    transition: .2s;
+}
+.show-btn{
+    z-index: 10;
+}
+.show-btn .go-top-btn{
+    animation: poppa .3s ease-in-out;
+    position: absolute;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 11;
+}
+.show-btn i{
+    transform: translate(-50%, -50%) scale(1);
+}
+@keyframes poppa{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+     50%{
+         width: 4rem;
+         height: 4rem;
+     }
+     100%{
+         width: 4rem;
+        height: 4rem;
+        }
+}
+/*
+FOOTER
+*/
+.content-footer{
+    box-sizing: border-box;   
+    margin: 0;
+    padding: 0;
+   
+}
+.footer{
+    padding: 1em 0;
+    background-color: #333;
+}
+.footer .socials{
+    text-align: center;
+    padding-bottom: 25px;
+    color: black;
+}
+.footer .socials a{
+font-size: 25px;
+color: inherit;
+border: 1px solid #ccc;
+width: 40px;
+height: 40px;
+line-height: 38px;
+display: inline-block;
+text-align: center;
+margin: 0 8px;
+border-radius: 50%;
+opacity: 0.75;
+}
+.footer .socials a:hover{
+    opacity: 0.9;
+}
+.footer ul{
+    margin-top: 0;
+    padding:0;
+    font-size: 18px;
+    line-height: 1.5;
+    list-style: none;
+    text-align: center;
+    
+}
+.footer ul li a{
+    color: white;
+text-decoration: none;
+opacity: 0.8;
+
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+    
+}
+.footer ul li a:hover{
+    opacity: 1;
+}
+.footer .copyright{
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+}
+
